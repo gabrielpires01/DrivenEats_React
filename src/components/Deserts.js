@@ -8,10 +8,15 @@ export default function Desserts (props) {
     function selectedDishes () {
         for (let i = 0; i < clicked.length; i++) {
             if (clicked[i].dessert) {
-                return props.setDessert('dessert', true)
+                props.setDessert('dessert', true)
+                break
             }
         }
-        return props.setDessert('dessert', false)
+        props.setDessert('dessert', false)
+        
+        setTimeout(() => {
+            props.setOrder(clicked,'dessert')
+        },1)
     }
 
     return (

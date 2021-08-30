@@ -24,7 +24,9 @@ export default function Itens (props) {
             }
             setTimeout(() => {
                 props.clickedList[props.index][props.type] = clicked;
-                props.clickedList[props.index].value = count + 1;
+                props.clickedList[props.index].value === 0 ? 
+                    props.clickedList[props.index].value = 1 : 
+                    props.clickedList[props.index].value = count;
                 props.isClickedFunc(props.clickedList);
                 props.isSelected();
             },100)

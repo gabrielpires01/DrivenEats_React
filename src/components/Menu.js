@@ -12,7 +12,15 @@ export default function Menu () {
     ]);
 
     function fullOrderCallback(order,dish) {
-        
+        if (dish === 'plate') {
+            console.log(dish, order)
+        }
+        if (dish === 'drink') {
+            console.log(dish, order)
+        }
+        if (dish === 'dessert') {
+            console.log(dish, order)
+        }
     }
 
     function finalizeOrder () {

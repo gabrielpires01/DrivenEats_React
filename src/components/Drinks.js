@@ -8,10 +8,17 @@ export default function Drinks (props) {
     function selectedDishes () {
         for (let i = 0; i < clicked.length; i++) {
             if (clicked[i].drink) {
-                return props.setDrink('drink', true)
+                props.setDrink('drink', true)
+                break
+            } else {
+                clicked[i].value = 0
             }
         }
-        return props.setDrink('drink', false)
+        props.setDrink('drink', false)
+
+        setTimeout(() => {
+            props.setOrder(clicked,'drink')
+        },1)
     }
 
     return (

@@ -15,7 +15,7 @@ export default function Plates (props) {
         props.setPlate('plate', false)
         setTimeout(() => {
             props.setOrder(clicked,'plate')
-        })
+        },1)
     }
 
     return (
