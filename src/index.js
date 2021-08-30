@@ -1,12 +1,12 @@
 import ReactDOM from "react-dom";
 import TopBar from "./components/TopBar";
-import BotBar from "./components/BotBar";
+import Menu from "./components/Menu";
 
 function App () {
     return (
         <>
             <TopBar />
-            <BotBar />
+            <Menu />
         </>
     )
 }
